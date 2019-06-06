@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>Middleware.Authentication.BearerToken</PackageId>
-    <Version>0.0.5</Version>
+    <PackageId>HttpClient.Middleware.BearerToken</PackageId>
+    <Version>0.0.1</Version>
     <Authors>alastairgould@gmail.com</Authors>
   </PropertyGroup>
   <ItemGroup>
