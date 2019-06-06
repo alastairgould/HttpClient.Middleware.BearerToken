@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Middleware.Authentication.BearerToken</PackageId>
+    <Version>0.0.5</Version>
+    <Authors>alastairgould@gmail.com</Authors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4"/>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0"/>
+  </ItemGroup>
+</Project>

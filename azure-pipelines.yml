@@ -1,0 +1,34 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'HttpClient.Middleware.BearerToken.sln'
+  displayName: 'Building HttpClient.Middleware.BearerToken'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: 'HttpClient.Middleware.BearerToken.sln'
+  displayName: 'Testing HttpClient.Middleware.BearerToken'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+  displayName: 'Packaging HttpClient.Middleware.BearerToken'
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    nuGetFeedType: 'external'
+    externalEndpoint: 'd80d1388-626f-43a1-82f2-0ebabdae7d52'
+  displayName: 'Pushing HttpClient.Middleware.BearerToken package to NuGet'
+
+
